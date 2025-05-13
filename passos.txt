@@ -1,0 +1,15 @@
+git config --global user.email "inadux15@gmail.com"
+git config --globar user.name "Japocss"
+
+Criar um projeto angular
+ng new galloflix
+
+cd galloflix
+
+ng serve -o
+
+Criar um componente
+ng g c pages/home
+
+Criar um serviço
+ng g c services/movieApi
