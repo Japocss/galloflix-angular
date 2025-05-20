@@ -12,4 +12,4 @@ Criar um componente
 ng g c pages/home
 
 Criar um serviço
-ng g c services/movieApi
+ng g s services/movieApi

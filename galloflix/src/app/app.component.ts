@@ -13,12 +13,12 @@ export class AppComponent {
   title = 'galloflix';
   navbg: any;
 
-  @HostListener('document:scroll') scrollover () {
+  @HostListener('document:scroll') scrollover() {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      this.navbg = { 'background-color' : '#000'}
-  } else {
-    this.navbg = {}
+      this.navbg = { 'background-color' : '#000' }
+    } else {
+      this.navbg = {}
+    }
   }
-}
 
 }
