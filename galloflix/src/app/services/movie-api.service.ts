@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root'  
 })
 export class MovieApiService {
 
@@ -20,6 +20,27 @@ export class MovieApiService {
 
   //Dados para o banner - Midias em destaque da semana
   bannerApiData(): Observable<any> {
-    return this.http.get(`${this.baseUrl}/trending/all/week/?language=pt-br`, this.options);
+    return this.http.get(`${this.baseUrl}/trending/all/week?language=pt-br`, this.options);
   }
+
+    //Filmes em Destaque do DIa
+    trendingMovieApiData(): Observable<any> {
+      return this.http.get(`${this.baseUrl}/trending/movie/day?language=pt-br`, this.options);
+    }
+
+    //Series em Destaque do DIa
+    trendingSerieApiData(): Observable<any> {
+      return this.http.get(`${this.baseUrl}/trending/tv/day?language=pt-br`, this.options);
+    }
+
+    //Filmes de ação popular
+    popularActionMovieApiData(): Observable<any> {
+      return this.http.get(`${this.baseUrl}/discover/movie?language=pt-br&with_genres=28&sort_by=popularity.desc`, this.options);
+    }
+  
+    //Filmes de terror popular
+    popularHorrorMovieApiData(): Observable<any> {
+      return this.http.get(`${this.baseUrl}/discover/movie?language=pt-br&with_genres=27&sort_by=popularity.desc`, this.options);
+    }
+  
 }
