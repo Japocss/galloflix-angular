@@ -16,3 +16,16 @@ ng g s services/movieApi
 
 Criar uma diretiva
 ng g d directives/auto-scroll
+
+
+
+<div class="container my-5">
+    <div class="row">
+        <h4 class="text-white">Filmes populares de Terror</h4>
+        <div class="rowposter mt-1" #popularHorrorMovies autoScroll>
+            <a href="#" *ngFor="let m of popularHorrorMovieResults">
+                <img src="https://image.tmdb.org/t/p/w500/{{ m.poster_path }}" alt="Capa do Filme">
+            </a>
+        </div>
+    </div>
+</div>
