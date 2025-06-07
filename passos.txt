@@ -1,5 +1,5 @@
 git config --global user.email "inadux15@gmail.com"
-git config --globar user.name "Japocss"
+git config --global user.name "Japocss"
 
 Criar um projeto angular
 ng new galloflix
